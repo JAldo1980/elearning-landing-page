@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* design system */
+
+/* 1.-- colors -- */
+
+:root {
+
+    --waikawa-grey: #666ca3;
+    --haiti: #13183f;
+    --oslo-grey: #83869a;
+    --french-rose: #f74780;
+    --carnation-pink: #ffa7c3;
+    --white: #fff;
+}
+
+/* 2. -- gradients --
+
+#f02aa6, #ff6f48;
+#4851ff - #f02aa6;
+
+*/
+
+/* 3. -- typography --
+
+Heading XL - Plus Jakarta Sans Extra Bold - 56px - 70px line
+Heading L - Plus Jakarta Sans Extra Bold - 40px - 51px line
+Heading M - Plus Jakarta Sans Extra Bold - 32px - 40px line
+Heading S - Plus Jakarta Sans Extra Bold - 24px - 28px line
+
+Body M - Plus Jakarta Sans Medium - 18px - 28px line
+Body S - Plus Jakarta Sans Bold - 16px - 28px line
+
+*/
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    font-size: 62.5%;
+    /* font size = 10px */
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+}
+
+/* MOBILE FIRST STYLING - MEDIA QUERIES ACCOUNT FOR TABLET AND DESKTOP STYLES */
+/* MY BREAK POINTS:
+
+MOBILE:
+TABLET: 
+DESKTOP:
+
+*/
+
+header {
+    margin-top: 1.5em;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    width: 95%;
+    max-width: 1400px;
+   
+}
+
+.logo-btn-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 2.2em;
+}
+
+.top-btn,
+.hero-btn,
+.footer-btn {
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 1em 1.5em;
+    border-radius: 30px;
+    border-style: none;
+    color: white;
+}
+
+/* btn hover states */
+
+.top-btn {
+    background-color: #13183f;
+}
+
+.top-btn:hover,
+.top-btn:focus {
+    background-color: #666ca3;
+    transition: .3s ease-in-out; 
+}
+
+.hero-btn {
+    margin-top: 1.2em;
+    background: linear-gradient(#ff6f48, #f02aa6);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    opacity: 0.7;
+    transition: .3s ease-in-out; 
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+    opacity: 0.7;
+    transition: .3s ease-in-out; 
+}
+
+.ft-btn-grad {
+    background: linear-gradient(#4851ff, #f02aa6);
+}
+
+
+
+/* end of header section */
+
+/* start of hero section */
+
+.hero-section {
+    margin-top: 4em;
+}
+
+.hero-headline {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.hero-body {
+    margin-top: 1.5em;
+    font-size: 1rem;
+    max-width: 410px;
+    line-height: 1.8em;
+}
+
+.hero-img {
+    background-image: url(/assets/image-hero-mobile.png);
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 3em;
+}
+
+/* course section */
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4em;
+    justify-items: center;
+}
+
+.grid-item {
+    width: 80%;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.card {
+    padding: 4em;
+    background-color: #fff;
+    position: relative;
+}
+
+.card-icon {
+    position: absolute;
+    top: -25px;
+}
+
+.card-header {
+    font-size: 1.5rem;
+}
+
+.card-body {
+    margin-top: 2em;
+    font-size: 1rem;
+}
+
+.card-link {
+    margin-top: 2em;
+    font-size: 1rem;
+}
+
+.card-link a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--french-rose)
+}
+
+.featured-card {
+    background: linear-gradient(#ff6f48, #f02aa6);
+    color: #fff;
+    font-weight: 900;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, .3);
+}
+
+/* footer section */
+
+footer {
+    margin-top: 10em;
+    background-color: #13183f;
+    padding: 3em;
+}
+
+
+/* MEDIA QUERIES */
+
+/* tablet media queries */
+
+@media screen and (min-width: 768px) {
+
+    
+    .container-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-headline {
+        position: relative;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+    .hero-body {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 1.5rem;
+    }
+
+
+    .hero-img {
+        z-index: 1;
+        background-image: url(/assets/image-hero-tablet.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 640px;
+        height: 640px;
+        top: -120px;
+        right: -230px;
+        padding-top: 0px;
+        /* overflow-x: hidden; */
+    }
+
+    .course-section {
+        margin: 4em;
+    }
+
+    .featured-card h2 {
+        font-size: 1.8rem;
+    }
+
+
+}
+
+/* end of tablet media queries */
+
+/* desktop media queries */
+
+@media (min-width: 1200px) {
+
+    .container-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-img {
+    
+        background-image: url(/assets/image-hero-desktop.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 640px;
+        height: 640px;
+        top: -120px;
+        right: -130px;
+        padding-top: 0px;
+        overflow-x: hidden;
+    }
+
+    .hero-headline {
+        font-size: 4.5rem;
+        font-weight: 800;
+    }
+    
+    .hero-body {
+        margin-top: .5em;
+        font-size: 1.5rem;
+        max-width: 600px;
+        line-height: 1.5em;
+    }
+    
+    .card-body {
+        line-height: 1.5em;
+    }
+
+    .featured-card h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/* end of desktop media queries */
+
+@media (min-width: 1400px) {
+
+    .hero-img {
+    
+        background-image: url(/assets/image-hero-desktop.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 720px;
+        height: 720px;
+        top: -150px;
+        right: 5px;
+        padding-top: 0px;
+        overflow-x: hidden;
+    }
+
+    .hero-headline {
+        font-size: 4.5rem;
+        font-weight: 800;
+    }
+    
+    .hero-body {
+        margin-top: .5em;
+        font-size: 1.5rem;
+        max-width: 600px;
+        line-height: 1.5em;
+    }
+    
+    .card-body {
+        line-height: 1.5em;
+    }
+
+
+    .featured-card h2 {
+        font-size: 2.5rem;
+    }
+
+}
